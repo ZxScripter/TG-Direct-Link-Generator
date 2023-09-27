@@ -8,13 +8,13 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(environ.get("API_ID"))
-    API_HASH = str(environ.get("API_HASH"))
-    BOT_TOKEN = str(environ.get("BOT_TOKEN"))
+    API_ID = int(environ.get("26376042"))
+    API_HASH = str(environ.get("1f5343b0646645ca1eaf7c4759fc248f"))
+    BOT_TOKEN = str(environ.get("6022123772:AAE2XI7-4sH2V_fX4eJZ2tcgTOWKda1i9W0"))
     SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))  # 1 minute
     WORKERS = int(environ.get("WORKERS", "6"))  # 6 workers = 6 commands at once
     BIN_CHANNEL = int(
-        environ.get("BIN_CHANNEL", None)
+        environ.get("-1001934076980", None)
     )  # you NEED to use a CHANNEL when you're using MULTI_CLIENT
     PORT = int(environ.get("PORT", 8080))
     BIND_ADDRESS = str(environ.get("WEB_SERVER_BIND_ADDRESS", "0.0.0.0"))
@@ -25,7 +25,7 @@ class Var(object):
     NO_PORT = True if str(NO_PORT).lower() == "true" else False
     if "DYNO" in environ:
         ON_HEROKU = True
-        APP_NAME = str(environ.get("APP_NAME"))
+        APP_NAME = str(environ.get("linkgenx"))
     else:
         ON_HEROKU = False
     FQDN = (
@@ -40,8 +40,8 @@ class Var(object):
             "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
         )
 
-    UPDATES_CHANNEL = "TechZBots"
-    OWNER_ID = int(environ.get('OWNER_ID', '777000'))
+    UPDATES_CHANNEL = "Ani_Bots_Updates"
+    OWNER_ID = int(environ.get('OWNER_ID', '2036803347'))
 
     BANNED_CHANNELS = list(set(int(x) for x in str(environ.get("BANNED_CHANNELS", "-1001296894100")).split()))
     BANNED_USERS = list(set(int(x) for x in str(environ.get("BANNED_USERS","5275470552 5287015877")).split()))
