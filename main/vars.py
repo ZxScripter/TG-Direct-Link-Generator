@@ -8,7 +8,7 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(environ.get("26376042"))
+    API_ID = int(environ.get("26376042")
     API_HASH = str(environ.get("1f5343b0646645ca1eaf7c4759fc248f"))
     BOT_TOKEN = str(environ.get("6022123772:AAE2XI7-4sH2V_fX4eJZ2tcgTOWKda1i9W0"))
     SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))  # 1 minute
